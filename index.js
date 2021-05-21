@@ -8,9 +8,9 @@ app.get("/", (request, response) => {
 });
 app.listen(process.env.PORT); // Receiving requests that leave you online
 
-const Discord = require("discord.js"); //Conexão com a livraria Discord.js
-const client = new Discord.Client(); //Criação de um novo Client
-const config = require("./config.json"); //Pegando o prefixo do bot para respostas de comandos
+const Discord = require("discord.js"); //Connect library discord.ns
+const client = new Discord.Client(); //Creating a new client
+const config = require("./config.json"); //Catching bot prefix to commands
 
 client.on('message', message => {
      if (message.author.bot) return;
@@ -31,4 +31,4 @@ client.on('message', message => {
   }
 });
 
-client.login(process.env.TOKEN);
+client.login(process.env.TOKEN); //Token always running the bot :)
