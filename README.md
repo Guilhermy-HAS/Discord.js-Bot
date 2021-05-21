@@ -4,11 +4,11 @@
 This repository is a bot model ready for all developers
 
  Instalations
-
 -
-[Discord.js Docs](https://discord.org/#/docs)
 
-[Discord-image-generation](https://www.npmjs.com/package/discord-image-generation)
+- [Discord.js Docs](https://discord.org/#/docs)
+
+- [Discord-image-generation](https://www.npmjs.com/package/discord-image-generation)
 
 How to create a bot
 -
