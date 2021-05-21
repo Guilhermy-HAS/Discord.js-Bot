@@ -19,7 +19,7 @@ How to create a bot
 
  [Link](https://discord.com/developers/applications)
 
-  __Step Two:__
+  __Step two:__
  After create the bot, create a repl in the site of https://replit.com and insert the `index.js` code in the file index.js of the your `repl`. also insert a `command folder`, for your bot's.
 
 Now, insert the final files: `config.json` and `.env`
