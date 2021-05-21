@@ -8,7 +8,7 @@ app.get("/", (request, response) => {
 });
 app.listen(process.env.PORT); // Receiving requests that leave you online
 
-const Discord = require("discord.js"); //Connect library discord.ns
+const Discord = require("discord.js"); //Connect library discord.js
 const client = new Discord.Client(); //Creating a new client
 const config = require("./config.json"); //Catching bot prefix to commands
 
