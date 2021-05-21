@@ -9,6 +9,31 @@ This repository is a bot model ready for all developers
 
 [Discord-image-generation](https://www.npmjs.com/package/discord-image-generation)
 
-Github Copy
+How to create a bot
 -
+  __Step one:__
+ Create a discord bot using the Discord Developer Portal.
 
+ [Link](https://discord.com/developers/applications)
+
+  __Step Two:__
+ After create the bot, create a repl in the site of https://replit.com and insert the `index.js` code in the file index.js of the your `repl`. also insert a `command folder`, for your bot's.
+
+Now, insert the final files: `config.json` and `.env`
+
+config.json - Bot prefix
+.env - Bot TOKEN
+
+Operation of config.json:
+
+```{ "prefix":"your-bot-prefix" }```
+
+Operation of .env:
+
+```TOKEN=your-bot-token```
+
+(Your reach the token in the Developer portal)
+
+Github Clone
+-
+`git clone https://github.com/YOUR-PROFILE-NAME/Discord.js-Bot`
