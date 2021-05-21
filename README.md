@@ -12,6 +12,8 @@ This repository is a bot model ready for all developers
 
 - [Discord-image-generation](https://www.npmjs.com/package/discord-image-generation)
 
+- [Canvas](https://www.npmjs.com/package/canvas)
+
 How to create a bot
 -
   __Step one:__
