@@ -1,21 +1,20 @@
-const express = require('express');
+ express = require('express');
 const app = express();
 app.get("/", (request, response) => {
   const ping = new Date();
-  ping.setHours(ping.getHours() - 3);
+  ping.setHours(ping.getHours() - 1);
   console.log(`Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
   response.sendStatus(200);
 });
-app.listen(process.env.PORT); // Receiving requests that leave you online
-
-const Discord = require("discord.js"); //Connect library discord.js
-const client = new Discord.Client(); //Creating a new client
-const config = require("./config.json"); //Catching bot prefix to commands
+app.listen(process.env.PORT); 
+const Discord = require("discord.js"); 
+const client = new Discord.Client(); 
+const config = require("./config.json"); 
 
 client.on('message', message => {
      if (message.author.bot) return;
      if (message.channel.type == 'dm') return;
-     if (!message.content.toLowerCase().startsWith(config.prefix.toLowerCase())) return;
+     if (!message.content.toLowerCase().startsWith(config.prefix)) return;
      if (message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)) return;
 
     const args = message.content
@@ -31,4 +30,21 @@ client.on('message', message => {
   }
 });
 
-client.login(process.env.TOKEN); //Token always running the bot :)
+client.on("ready", () => {
+  let activities = [
+      `Utilize ${config.prefix}help para obter ajuda`,
+      `${client.guilds.cache.size} servidores!`,
+      `${client.channels.cache.size} canais!`,
+      `${client.users.cache.size} usuários!`
+    ],
+    i = 0;
+  setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, {
+        type: "WATCHING"
+      }), 1000 * 60); 
+  client.user
+      .setStatus("on")
+      .catch(console.error);
+console.log("Estou Online!")
+});
+
+client.login(process.env.TOKEN); 
